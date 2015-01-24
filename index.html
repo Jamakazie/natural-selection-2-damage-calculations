@@ -1,0 +1,29 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript">
+			var weapons = [];
+			var actors = [];
+		</script>
+		<script src="./assault-rifle.json" type="text/javascript"></script>
+		<script src="./marine.json" type="text/javascript"></script>
+		<script src="./skulk.json" type="text/javascript"></script>
+		<script src="./damage_machine.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var aliens = [];
+			var marines = [];
+			var structures = [];
+			for(var i = 0; i < actors.length; i++){
+				if(actors[i].team === "marine"){
+					marines.push(actors[i]);
+				}
+				if(actors[i].team === "alien"){
+					aliens.push(actors[i]);
+				}
+			}
+			console.log(aliens);
+			console.log(marines);
+		
+		</script>
+	</body>
+</html>
