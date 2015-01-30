@@ -97,5 +97,10 @@ time_to_kill(actors[0], weapons[0], 100);
 		var id = $(this).attr('id');
 		state.player = actors.find(id);
 		console.log(state);
+		buildCurrentPlayer(state.player);
 	});
 }());
+
+function buildCurrentPlayer(player){
+}
+
