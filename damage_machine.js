@@ -83,11 +83,11 @@ console.log(aliens);
 console.log(marines);
 
 
-hits_to_kill(actors[0], weapons[0]);
+//hits_to_kill(actors[0], weapons[0]);
 
 console.log("calling time to kill\n\n");
 
-time_to_kill(actors[0], weapons[0], 100);
+//time_to_kill(actors[0], weapons[0], 100);
 
 
 // Wire up buttons
@@ -102,5 +102,6 @@ time_to_kill(actors[0], weapons[0], 100);
 }());
 
 function buildCurrentPlayer(player){
+	$("#player-identifier")
 }
 
