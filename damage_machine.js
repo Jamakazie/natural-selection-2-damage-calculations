@@ -76,7 +76,7 @@ for(var i = 0; i < actors.length; i++){
 }
 
 function buildPlayers(actor){
-	$("#possible-players").append("<div id='" + actor.name + "'>" + actor.name + "</div>"); 
+	$("#possible-players").append("<div class='actor-button' id='" + actor.name + "'>" + actor.name + "</div>"); 
 }
 
 console.log(aliens);
@@ -90,3 +90,12 @@ console.log("calling time to kill\n\n");
 time_to_kill(actors[0], weapons[0], 100);
 
 
+// Wire up buttons
+(function(){
+	console.log('wat');
+	$(document).on("click", ".actor-button", function(){
+		var id = $(this).attr('id');
+		state.player = actors.find(id);
+		console.log(state);
+	});
+}());
