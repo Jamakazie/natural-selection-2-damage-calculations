@@ -11,7 +11,7 @@ function calc_armor(total_armor, damage_type){
 	var modifier;
 	switch(damage_type){
 		case "corrode":
-			modifier = .23;
+			modifier = 0.23;
 			break;
 
 		case "heavy":
@@ -59,8 +59,34 @@ function time_to_kill(actor, weapon, accuracy){
 
 
 
+// on page shit I guess
+
+console.log(actors);
+for(var i = 0; i < actors.length; i++){
+	if(actors[i].team === "marine"){
+		marines.push(actors[i]);
+	}
+	if(actors[i].team === "alien"){
+		aliens.push(actors[i]);
+	}
+	buildPlayers(actors[i]);
+	if(actors[i].type == "nan"){
+		console.log("oh no");
+	}
+}
+
+function buildPlayers(actor){
+	$("#possible-players").append("<div id='" + actor.name + "'>" + actor.name + "</div>"); 
+}
+
+console.log(aliens);
+console.log(marines);
+
+
 hits_to_kill(actors[0], weapons[0]);
 
 console.log("calling time to kill\n\n");
 
 time_to_kill(actors[0], weapons[0], 100);
+
+
