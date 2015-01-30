@@ -15,6 +15,16 @@
 		var aliens = [];
 		var marines = [];
 		var structures = [];
+		var state = {}
+		actors.find = function(target){
+			for (var i = 0; i < this.length; i++){
+				if(this[i].name = target){
+					return this[i];
+				}
+			}
+			return false;
+		}
+
 	</script>
 	</head>
 	<body>
